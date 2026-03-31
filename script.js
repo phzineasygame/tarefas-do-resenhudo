@@ -21,6 +21,9 @@ function createDeleteButton(){
 function createSpan(taskInputValue){
     const span = document.createElement('span');
     span.textContent = taskInputValue;
+    span.addEventListener("Click",function(){
+        span.classList.toggle('completed');
+    })
     return span;
 }
 
