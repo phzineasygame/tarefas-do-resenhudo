@@ -98,11 +98,13 @@ taskBtn.addEventListener("click", addTask);
 clearBtn.addEventListener("click", clearTasks);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 
-taskInput.addEventListener("keypress", function (event) {
-    if (event.key === "Enter") {
-        addTask();
-    }
-});
 
 
 updateCounter();
+
+taskInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // evita comportamento estranho
+        addTask();
+    }
+});

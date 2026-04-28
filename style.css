@@ -1,6 +1,105 @@
-body{
-    background-color:lightcyan;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0f0f1a, #050510);
+    color: #00ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.completed{
+
+
+h1 {
+    margin-top: 30px;
+    font-size: 2.5rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+
+#taskCounter {
+    margin: 10px 0 20px;
+    font-size: 1.2rem;
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+
+#taskInput {
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #00ffff;
+    background-color: transparent;
+    color: #00ffff;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 300px;
+}
+
+
+li {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00ffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px #00ffff;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+
+li span {
+    cursor: pointer;
+}
+
+
+.completed {
     text-decoration: line-through;
+    color: #888;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+
+li button {
+    margin-left: 5px;
+    padding: 5px 8px;
+    font-size: 0.8rem;
 }
